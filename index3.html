@@ -5,12 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <link rel= "stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <link rel="stylesheet" href="styles.css">
+    <!--<link rel="stylesheet" href="styles.css">-->
     <link rel="stylesheet" href="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css">
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
     <title>Navigation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        
+        }
 
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 8vh;
+            background-color: thistle;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .name {
+            color:black;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 20px;
+        }
+
+        .nav_links {
+            display: flex;
+            justify-content: space-around;
+            width: 30%;
+        }
+
+        .nav_links a {
+            color:black;
+        }
+
+        .nav_links li a:hover {
+            color:blue;
+        }
+
+        h1 {
+            color: goldenrod;
+            font-size: xx-large;  
+        }
+
+        p {
+            color: mediumvioletred;
+            font-size: 6em;
+            font-style: italic;
+            font-size: x-large;
+        }
+
+        button {
+            padding: 9px 25px;
+            background-color: turquoise;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color:yellowgreen;
+        }
+
+        .big{
+            font-size: 9em;
+        }
+
+        .reduce{
+            font-size: 4em;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -18,21 +86,20 @@
             <h4>Kiran Gurung</h4>
         </div>
         <ul class="nav_links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#aboutme">About me</a></li>
-            <li><a href="#classes">Classes</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="index3.html">Home</a></li>
+            <li><a href="aboutme.html">About me</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
         </ul>
         <a href="#"><button id="contact">Contact</button></a>
     </nav>
 
     <!--This is the main section-->
-    <h1><b>Welcome to my webpage</b></h1>
-    <p class="enlargeable">
-        <br>Hello guys, my name is Kiran Gurung. This is my homepage.I am a junior at Point Park University.
-    </p>
-    <img class="image" src="kiran.jpg" alt="image" width="350" height="425"> </td>
-
+    <h1 class="enlargeable"><b>Welcome to my webpage</b></h1>
+    
+    <a href="#">
+     <img class="image" src="kiran.jpg" alt="image" width="350" height="425"> <br>
+    </a>
     <!--Buttons-->
     <button id="enlarge">ENLARGE</button>
     <button id="reduce">reduce</button>
@@ -41,12 +108,12 @@
     <script>
         //Increase the object by clicking on the button
         $("button#enlarge").on("click", function(){
-            $("p.enlargeable").addClass("big");
+            $("h1.enlargeable").addClass("big");
         });
 
         //Increase the object by clicking on the button
         $("button#reduce").on("click", function(){
-            $("p.enlargeable").addClass("reduce");
+            $("h1.enlargeable").addClass("reduce");
         });
     </script>
     
